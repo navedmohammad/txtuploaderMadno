@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("** 𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷\n\n  𝔾ɪᴠᴇ /SmexyOP ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️**")
+    editable = await m.reply_text("** 𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷\n\n  𝔾ɪᴠᴇ /Madno ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️**")
 
 
 @bot.on_message(filters.command(["Bye"]))
