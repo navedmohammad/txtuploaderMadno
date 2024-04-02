@@ -31,19 +31,19 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("**ℍɪɪ ┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈😎 \n\n  𝔾ɪᴠᴇ /Robin ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️\n\n\n DM for Buy Source Code \n @TeamjaishriramBot**")
+    editable = await m.reply_text("** 𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷\n\n  𝔾ɪᴠᴇ /SmexyOP ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️**")
 
 
-@bot.on_message(filters.command(["rukja"]))
+@bot.on_message(filters.command(["Bye"]))
 async def restart_handler(_, m):
-    await m.reply_text("**ℝᴜᴋ 𝔾ʏᴀ😁😎**", True)
+    await m.reply_text("**Stoped Babe💕**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["Robin"]))
+@bot.on_message(filters.command(["SmexyOP"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**ℍɪɪ ┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈😎 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
+    editable = await m.reply_text('**𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -70,7 +70,7 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝔼ɴᴛᴇʀ 𝔹ᴀᴛᴄʜ ℕᴀᴍᴇ🤔**")
+    await editable.edit("**Enter Batch Name Babe**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -100,7 +100,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Captio to add Otherwise send**   **`Robin`**")
+    await editable.edit("**Enter A Captio to add Otherwise send**   **`Madno`**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -110,7 +110,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("**Now send the** **Thumb url**\nEg » ℕʜɪ 𝕃ᴀɢᴀʏᴀ😁\n\**nor Send** `no`")
+    await editable.edit("**Now send the** **Thumb url**\nEg » **`https://telegra.ph/file/acfc1ed42e196ffa450cf.jpg`**\n\**nor Send** `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -162,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**𝐕𝐢𝐝_𝐢𝐝🎬➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}{res}┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈.mkv\n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ —»» ┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈\n**'
-                cc1 = f'**𝐩𝐝𝐟_𝐢𝐝📁➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈.pdf \n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ —»»  ┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈\n**'
+                cc = f'**𝐕𝐢𝐝_𝐢𝐝🎬➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{res}{MR}.mkv\n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ [Madno](http://t.me/Imthelegend_bot)\n**'
+                cc1 = f'**𝐩𝐝𝐟_𝐢𝐝📁➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ —»»  [Madno](http://t.me/Imthelegend_bot)\n**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**Name »** `{name}\nQuality » {raw_text2}`\n\n**Url »** `{url}`\n\n🤖𝔹ᴏᴛ 𝕄ᴀᴅᴇ 𝔹ʏ ┈━═.•°℞𝑜多їη 𝙷𝑜๏𝒹°•.═━┈\n"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**Name »** `{name}\nQuality » {raw_text2}`\n\n**Url »** `{url}`\n\n𝐌𝐚𝐝𝐞 𝐁𝐲  : [Madno](http://t.me/Imthelegend_bot)\n"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -206,7 +206,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**ℂᴏᴍᴘʟᴇᴛᴇ ℍᴏ 𝔾ʏᴀ 𝔹ᴏ𝕤𝕤😎\n\n DM for Buy Source Code \n @TeamjaishriramBot**")
+    await m.reply_text("**Sb Nikal Diya Babe💕\n MUST JOIN [Madno](http://t.me/Imthelegend_bot)**")
 
 
 bot.run()
