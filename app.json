@@ -7,6 +7,7 @@
         "video-extract",
         "pyrogram"
     ],
+        "env": {
     "repository": "https://github.com/navedmohammad/txtuploaderMadno",
     "success_url": "https://t.me/SmexyStore",
     "stack": "container",
@@ -31,6 +32,7 @@
         },
         {
             "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
         }
     ]
     }
