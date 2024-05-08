@@ -7,7 +7,7 @@
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/telegrambots0/txtuploaderMadno",
+    "repository": "https://github.com/navedmohammad/txtuploaderMadno",
     "success_url": "https://t.me/SmexyStore",
     "stack": "container",
     "env": {
