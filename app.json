@@ -7,7 +7,6 @@
         "video-extract",
         "pyrogram"
     ],
-        "env": {
     "repository": "https://github.com/navedmohammad/txtuploaderMadno",
     "success_url": "https://t.me/SmexyStore",
     "stack": "container",
@@ -23,7 +22,6 @@
         "BOT_TOKEN": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑩𝒐𝒕 𝑻𝒐𝒌𝒆𝒏",
             "required": true
-        }
     }
     },
     "addons": [],
