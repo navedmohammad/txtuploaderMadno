@@ -1,4 +1,3 @@
-
 import os
 import re
 import sys
@@ -32,19 +31,37 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("** 𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷\n\n  𝔾ɪᴠᴇ /Madno ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️**")
+    me2 = (await bot.get_me()).mention
+    editable = await m.reply_text(
+       f"""𝐇𝐞𝐲 {m.from_user.mention}🍷,
+
+𝐈 𝐀𝐦 {me2},
+𝐅𝐨𝐫 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐋𝐢𝐧𝐤𝐬 𝐅𝐫𝐨𝐦 𝐘𝐨𝐮𝐫 **.𝐓𝐗𝐓** 𝐅𝐢𝐥𝐞.
+𝐀𝐧𝐝 𝐓𝐡𝐞𝐧 𝐔𝐩𝐥𝐨𝐚𝐝 𝐓𝐡𝐚𝐭 𝐅𝐢𝐥𝐞 𝐎𝐦 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐒𝐨 𝐁𝐚𝐬𝐢𝐜𝐚𝐥𝐥𝐲 𝐈𝐟 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞 𝐅𝐢𝐫𝐬𝐭 𝐒𝐞𝐧𝐝 𝐌𝐞 ⟰ /SmexyOP 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐀𝐧𝐝 𝐓𝐡𝐞𝐧 𝐅𝐨𝐥𝐥𝐨𝐰 𝐅𝐞𝐰 𝐒𝐭𝐞𝐩𝐬..
+𝐍𝐎 𝐀𝐍𝐘 𝐄𝐑𝐑𝐎𝐑.
+
+𝐌𝐚𝐝𝐞 𝐁𝐲  : [𝙎𝙢𝙚𝙭𝙮 ᥫ᭡](http://t.me/SmexyOP) !""", reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✜" ,url=f"https://t.me/SmexyStore") ],
+                    [
+                    InlineKeyboardButton("✜◆ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ◆✜" ,url="https://t.me/SmexyOP") ],
+                    [
+                    InlineKeyboardButton("🦋 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🦋" ,url="https://www.youtube.com/@Vire_1_") ]                               
+            ]))
 
 
-@bot.on_message(filters.command(["Bye"]))
+
+@bot.on_message(filters.command(["Stop"]))
 async def restart_handler(_, m):
-    await m.reply_text("**Stoped Babe💕**", True)
+    await m.reply_text("**💕𝑺𝒕𝒐𝒑𝒑𝒆𝒅 𝑩𝒂𝒃𝒆💕**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["Madno"]))
+@bot.on_message(filters.command(["SmexyOP"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**𝐇𝐞𝐲 [Madno](http://t.me/Imthelegend_bot) 𝙃𝙚𝙧𝙚🍷 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
+    editable = await m.reply_text('**𝐇𝐞𝐲 [𝙎𝙢𝙚𝙭𝙮 ᥫ᭡](http://t.me/SmexyOP) 𝙃𝙚𝙧𝙚🍷 \n\n 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -61,23 +78,23 @@ async def account_login(bot: Client, m: Message):
        os.remove(x)
             # print(len(links)
     except:
-           await m.reply_text("**Invalid file input.**")
+           await m.reply_text("**𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐟𝐢𝐥𝐞 𝐢𝐧𝐩𝐮𝐭.**")
            os.remove(x)
            return
     
    
-    await editable.edit(f"**𝕋ᴏᴛᴀʟ ʟɪɴᴋ𝕤 ғᴏᴜɴᴅ ᴀʀᴇ🔗🔗** **{len(links)}**\n\n**𝕊ᴇɴᴅ 𝔽ʀᴏᴍ ᴡʜᴇʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ɪɴɪᴛɪᴀʟ ɪ𝕤** **1**")
+    await editable.edit(f"**𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤 𝐅𝐨𝐮𝐧𝐝 𝐀𝐫𝐞 🔗🔗** **{len(links)}**\n\n**𝐒𝐞𝐧𝐝 𝐅𝐫𝐨𝐦 𝐖𝐡𝐞𝐫𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬** **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**Enter Batch Name Babe**")
+    await editable.edit("𝐍𝐨𝐰 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐁𝐚𝐭𝐜𝐡 𝐍𝐚𝐦𝐞")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
     
 
-    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸\n\nℚᴜᴀʟɪᴛʏ तो बताओ 𝕃ɪᴋᴇ 𝟷𝟺𝟺ᴘ, 𝟸𝟺𝟶ᴘ, 𝟹𝟼𝟶ᴘ, 𝟺𝟾𝟶ᴘ, 𝟽𝟸𝟶ᴘ, 𝟷𝟶𝟾𝟶ᴘ**")
+    await editable.edit("**𝐄𝐧𝐭𝐞𝐫 𝐄𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧 📸\n\nℚᴜᴀʟɪᴛʏ तो बताओ 𝕃ɪᴋᴇ 𝟷𝟺𝟺ᴘ, 𝟸𝟺𝟶ᴘ, 𝟹𝟼𝟶ᴘ, 𝟺𝟾𝟶ᴘ, 𝟽𝟸𝟶ᴘ, 𝟷𝟶𝟾𝟶ᴘ\nPlease Choose Quality**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -101,17 +118,17 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Captio to add Otherwise send**   **`Madno`**")
+    await editable.edit("✏️ Now Enter A Caption to add caption on your uploaded file Otherwise send**   **`𝙎𝙢𝙚𝙭𝙮 ᥫ᭡`**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
     highlighter  = f"️ ⁪⁬⁮⁮⁮"
-    if raw_text3 == 'Robin':
+    if raw_text3 == 'SmexyOP':
         MR = highlighter 
     else:
         MR = raw_text3
    
-    await editable.edit("**Now send the** **Thumb url**\nEg » **`https://telegra.ph/file/acfc1ed42e196ffa450cf.jpg`**\n\**nor Send** `no`")
+    await editable.edit("🌄 Now send the Thumb url\nEg » **`https://graph.org/file/c9669066860d912fd5035.jpg`** \n\n Or if don't want thumbnail send = **`no`**")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -163,8 +180,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**𝐕𝐢𝐝_𝐢𝐝🎬➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{res}{MR}.mkv\n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ [Madno](http://t.me/Imthelegend_bot)\n**'
-                cc1 = f'**𝐩𝐝𝐟_𝐢𝐝📁➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ —»»  [Madno](http://t.me/Imthelegend_bot)\n**'
+                cc = f'**𝐕𝐢𝐝_𝐢𝐝🎬➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{res}{MR}.mkv\n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ [𝙎𝙢𝙚𝙭𝙮 ᥫ᭡](http://t.me/SmexyOP)\n**'
+                cc1 = f'**𝐩𝐝𝐟_𝐢𝐝📁➤ {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n𝐁𝐚𝐭𝐜𝐡 ➤ {raw_text0} \n\n 🌟𝔻ᴏᴡɴʟᴏᴀᴅ 𝔹ʏ ✨ —»»  [𝙎𝙢𝙚𝙭𝙮 ᥫ᭡](http://t.me/SmexyOP)\n**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -190,7 +207,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**Name »** `{name}\nQuality » {raw_text2}`\n\n**Url »** `{url}`\n\n𝐌𝐚𝐝𝐞 𝐁𝐲  : [Madno](http://t.me/Imthelegend_bot)\n"
+                    Show = f"**❊⟱𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ⟱❊ »**\n\n**📝 𝐍𝐚𝐦𝐞 »** `{name}\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`\n\n𝐌𝐚𝐝𝐞 𝐁𝐲  : [𝙎𝙢𝙚𝙭𝙮 ᥫ᭡](http://t.me/SmexyOP)\n"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -207,7 +224,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**Sb Nikal Diya Babe💕\n MUST JOIN [Madno](http://t.me/Imthelegend_bot)**")
+    await m.reply_text("**Sb Nikal Diya Babe💕\n MUST JOIN [𝙎𝙈𝙀𝙓𝙔 𝙎𝙏𝙊𝙍𝙀 🇮🇳](http://t.me/SmexyStore)**")
 
 
 bot.run()
