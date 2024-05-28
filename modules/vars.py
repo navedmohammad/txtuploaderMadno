@@ -2,10 +2,10 @@
 
 # Add your details here and then deploy by clicking on HEROKU Deploy button
 
-api_id = "28619451"
+api_id = "22475741"
 
-api_hash = "e41e306cd0e0d0be11ec78c281f0b628"
+api_hash = "1a217be71a0225e0a678af286c211f8a"
 
-bot_token = "7084783725:AAFqfIvmE25YPJ_rliHaNES6a5Xxmsq3Vsc"
+bot_token = "7381636200:AAGSpXuOVESR0gRgsq7_DcmdUHDkGitCpAc"
 
 # Bot Username = "https://t.me/SmexyTxtLeechingBot"
