@@ -2,8 +2,6 @@
 
 # Add your details here and then deploy by clicking on HEROKU Deploy button
 
-
-
 api_id = "28619451"
 
 api_hash = "e41e306cd0e0d0be11ec78c281f0b628"
